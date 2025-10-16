@@ -1,3 +1,4 @@
+cat > .github/workflows/artifacts.yml << 'EOF'
 name: Create Artifacts
 
 on:
@@ -8,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - name: Create artifacts
       run: |
@@ -16,9 +17,12 @@ jobs:
         echo "Shuaib Islamic App" > artifacts/project.txt
         echo "Build: $(date)" > artifacts/build.txt
         ls -la > artifacts/files.txt
+        find . -name "*.js" -o -name "*.json" -o -name "*.html" | head -10 > artifacts/code-files.txt
         
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: islamic-app
         path: artifacts/
+        retention-days: 7
+EOF
