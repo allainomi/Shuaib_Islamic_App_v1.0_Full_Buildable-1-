@@ -1,0 +1,71 @@
+name: shuaib_islamic_app
+description: >
+  Shuaib Islamic App - A complete Islamic companion featuring Quran, Hadith, Fatawa, and Azkar in Urdu, Arabic, and English.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- UI & Islamic Style ---
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.0
+  flutter_svg: ^2.0.10+1
+  font_awesome_flutter: ^10.7.0
+  lottie: ^3.2.0
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.0
+  animated_text_kit: ^4.2.2
+
+  # --- Islamic Functionalities ---
+  quran: ^3.0.2
+  http: ^1.4.0
+  intl: ^0.20.2
+  flutter_tts: ^3.8.0
+  just_audio: ^0.9.42
+  share_plus: ^10.0.2
+  url_launcher: ^6.3.0
+
+  # --- State & Storage ---
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
+  path_provider: ^2.1.4
+  sqflite: ^2.4.0
+  connectivity_plus: ^6.0.3
+  package_info_plus: ^8.0.0
+
+  # --- Notifications ---
+  flutter_local_notifications: ^17.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/quran/
+    - assets/hadith/
+    - assets/audio/
+    - assets/fonts/
+
+  fonts:
+    - family: QuranFont
+      fonts:
+        - asset: assets/fonts/me_quran.ttf
+    - family: UrduFont
+      fonts:
+        - asset: assets/fonts/noori_nastaleeq.ttf
+    - family: ArabicFont
+      fonts:
+        - asset: assets/fonts/uthmanic.ttf

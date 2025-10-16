@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = 'shuaib_islamic_app'
