@@ -21,17 +21,15 @@ dependencies:
   connectivity_plus: ^6.1.0
   path_provider: ^2.1.2
   webview_flutter: ^4.7.0
-  audio_players: ^1.2.0
   google_fonts: ^6.2.1
-
-  # ✅ Quran package (correct working version)
-  quran: ^2.0.2
-
-  # Optional Islamic features
   flutter_tts: ^4.2.1
   share_plus: ^10.0.2
   sqflite: ^2.4.0
   get: ^4.6.6
+  audio_players: ^1.2.0
+
+  # ✅ Correct Quran package (available version)
+  quran: ^1.2.4
 
 dev_dependencies:
   flutter_test:
