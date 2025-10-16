@@ -1,0 +1,24 @@
+name: Create Artifacts
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Create artifacts
+      run: |
+        mkdir -p artifacts
+        echo "Shuaib Islamic App" > artifacts/project.txt
+        echo "Build: $(date)" > artifacts/build.txt
+        ls -la > artifacts/files.txt
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: islamic-app
+        path: artifacts/
