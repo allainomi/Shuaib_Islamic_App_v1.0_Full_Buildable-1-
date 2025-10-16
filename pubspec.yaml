@@ -1,71 +1,53 @@
-name: shuaib_islamic_app
-description: >
-  Shuaib Islamic App - A complete Islamic companion featuring Quran, Hadith, Fatawa, and Azkar in Urdu, Arabic, and English.
-
-publish_to: 'none'
+name: iqra_islamic_app
+description: A complete Islamic Wisdom App including Quran, Hadith, and Fatawa sections.
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  # --- UI & Islamic Style ---
-  cupertino_icons: ^1.0.8
-  google_fonts: ^6.2.0
-  flutter_svg: ^2.0.10+1
-  font_awesome_flutter: ^10.7.0
-  lottie: ^3.2.0
-  carousel_slider: ^5.0.0
-  smooth_page_indicator: ^1.2.0
-  animated_text_kit: ^4.2.2
-
-  # --- Islamic Functionalities ---
-  quran: ^3.0.2
-  http: ^1.4.0
-  intl: ^0.20.2
-  flutter_tts: ^3.8.0
-  just_audio: ^0.9.42
-  share_plus: ^10.0.2
-  url_launcher: ^6.3.0
-
-  # --- State & Storage ---
+  cupertino_icons: ^1.0.6
   provider: ^6.1.2
-  shared_preferences: ^2.3.3
-  path_provider: ^2.1.4
-  sqflite: ^2.4.0
-  connectivity_plus: ^6.0.3
-  package_info_plus: ^8.0.0
+  http: ^1.2.2
+  intl: ^0.19.0
+  shared_preferences: ^2.2.3
+  url_launcher: ^6.3.0
+  fluttertoast: ^8.2.4
+  connectivity_plus: ^6.1.0
+  path_provider: ^2.1.2
+  webview_flutter: ^4.7.0
+  audio_players: ^1.2.0
+  google_fonts: ^6.2.1
 
-  # --- Notifications ---
-  flutter_local_notifications: ^17.2.3
+  # ✅ Quran package (correct working version)
+  quran: ^2.0.2
+
+  # Optional Islamic features
+  flutter_tts: ^4.2.1
+  share_plus: ^10.0.2
+  sqflite: ^2.4.0
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: ^3.0.2
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/icons/
     - assets/quran/
-    - assets/hadith/
+    - assets/images/
     - assets/audio/
-    - assets/fonts/
+    - assets/json/
 
   fonts:
-    - family: QuranFont
+    - family: NotoNastaliqUrdu
       fonts:
-        - asset: assets/fonts/me_quran.ttf
-    - family: UrduFont
-      fonts:
-        - asset: assets/fonts/noori_nastaleeq.ttf
-    - family: ArabicFont
-      fonts:
-        - asset: assets/fonts/uthmanic.ttf
+        - asset: assets/fonts/NotoNastaliqUrdu-Regular.ttf
